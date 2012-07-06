@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NightFly</title>
+  <title>Night Fly</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+   <style type="text/css">
+  .Main_Image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 150px;
+  }
+
+  .Nav_Bar {
+  	  position: absolute;
+  	  top: 200px;
+  	  left: 0px;
+  }
+
+  .Main {
+  	  position: absolute;
+  	  top: 200px;
+  	  left: 250px;
+  }
+
+
+  </style>
 </head>
 <body>
 
-<%= yield %>
+  <div class="Main_Image">
+  	<%= image_tag("/images/fly.jpg") =%>
+  </div>
+
+  <div class="Nav_Bar">
+    <%= link_to "About" %> <br />
+    <%= link_to "Resume" %> <br />
+    <%= link_to "Blog" %> <br />
+  </div>	
+
+  <div class="Main"
+    <%= yield %>
+  </div>
 
 </body>
 </html>

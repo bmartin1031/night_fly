@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Night Fly</title>
+  <title>Night Fly!</title>
 
   <style type="text/css">
   .Home {
@@ -20,8 +20,7 @@
 
 <div class="Home">
   <p style="text-align:center;margin-left:auto;margin-right:auto;">
-    <a href="www.google.com">
-    <img alt="Fly_home" src="/images/NightFlyHome.png" />
+    <%= link_to image_tag("/images/NightFlyHome.png"), {:action => 'index', :controller => 'about'} %>
   </p>
 </div>
 
