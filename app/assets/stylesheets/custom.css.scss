@@ -1,6 +1,10 @@
 @import "bootstrap";
 
-.navbar .brand {
+body { padding-top: 40px; }
+
+@import "bootstrap-responsive";
+
+.navbar-fixed-top .brand {
   padding-right: 0;
   padding-left: 0;
   margin-left: 20px;
@@ -11,4 +15,7 @@
   -webkit-transition: all .2s linear;
      -moz-transition: all .2s linear;
           transition: all .2s linear;
+}
+.navbar-fixed-top .brand:hover {
+  text-decoration: none;
 }
