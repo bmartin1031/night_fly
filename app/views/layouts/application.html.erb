@@ -24,13 +24,24 @@
             <span class="icon-bar"></span>
           </a>
 
-          <p class="brand">mar-10</p>
+          <%= link_to "mar 10", { :controller => "static_pages" , :action => "home" }, :class=> "brand" %>
 
           <div class="nav-collapse">
             <ul class="nav pull-right">
-              <li class="active"><%= link_to "About" %></li>
-              <li><%= link_to "Resume" %></li>
-              <li><%= link_to "Blog" %></li>
+
+              <% if @page_type == "About" %>
+                <li class="active"><%= link_to "About", about_index_path %></li>
+                <li><%= link_to "Resume", resume_index_path %></li>
+                <li><%= link_to "Blog", blog_index_path %></li>
+              <% elsif @page_type == "Resume" %>
+                <li><%= link_to "About", about_index_path %></li>
+                <li class="active"><%= link_to "Resume", resume_index_path %></li>
+                <li><%= link_to "Blog", blog_index_path %></li>
+              <% elsif @page_type == "Blog" %>
+                <li><%= link_to "About", about_index_path %></li>
+                <li><%= link_to "Resume", resume_index_path %></li>
+                <li class="active"><%= link_to "Blog", blog_index_path %></li>
+              <% end %>
             </ul>
           </div>
         </div>

@@ -1,4 +1,8 @@
 NightFly::Application.routes.draw do
+  get "blog/index"
+
+  get "resume/index"
+
   get "about/index"
 
   root :to => 'static_pages#home'
